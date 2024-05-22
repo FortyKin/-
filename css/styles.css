@@ -1,0 +1,189 @@
+body {
+    background-color: #57bef9; 
+}
+div {
+    margin: 15px auto;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: transparent; 
+}
+input {
+    width: 60%;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+button:hover {
+    animation: pulse 1s infinite;
+}
+button {
+    width: auto;
+    background-color: #72f68a;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.tasks {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+.tasks li {
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    animation: fadeIn 0.5s ease-out;
+}
+/* Определение анимации */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Применение анимации к кнопке при наведении */
+.tasks li button:hover {
+    animation: pulse 1s infinite;
+}
+
+.tasks li button {
+    background-color: #ff6b6b;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Анимация появления новой задачи */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+div:first-child {
+font-family: 'Pacifico', cursive; /* Рукописный шрифт */
+font-size: 36px; /* Увеличенный размер шрифта */
+color: #333; /* Темный оттенок текста */
+text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Тень для объема */
+margin-top: 10px;
+}
+.theme-switcher {
+    position: absolute;
+    top: 20px;
+    margin-left: 30px;
+}
+
+.theme-toggle {
+    display: none;
+}
+
+.toggle-label {
+    display: block;
+    width: 40px;
+    height: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+}
+
+.toggle-icon {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: #edf902;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: transform 0.3s ease;
+}
+
+.theme-toggle:checked + .toggle-label {
+    background-color: #333;
+}
+
+.theme-toggle:checked + .toggle-label .toggle-icon {
+    transform: translateX(20px);
+}
+
+/* Стили для темной темы */
+body.dark-theme {
+    background-color: #333;
+    color: #fff;
+}
+body.dark-theme .tasks li {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-theme .toggle-icon {
+    background-color: #fff; /* Белый цвет для кружка на темной теме */
+  }
+  
+  body.dark-theme .theme-switcher {
+    background-color: #555; /* Серый цвет для контейнера на темной теме */
+  }
+.todo {
+    color: #333;
+  }
+  
+  body.dark-theme .todo {
+    color: #fff;
+  }
+body.dark-theme input,
+body.dark-theme button {
+    background-color: #555;
+    color: #fff;
+}
+a.diz {
+color: #86f4c1;
+}
+body.dark-theme .diz{
+    color: #fe9f06;
+}
+.tasks li span.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+.tasks li {
+    display: flex;
+    align-items: left;
+    justify-content: space-between;
+    gap: 10px;
+    max-width: 1245px;
+}
+.tasks li span {
+    flex-grow: 1;
+    text-align: left;
+}
+input[type="date"], input[type="time"] {
+    width: auto;
+    display: inline-block;
+    margin-right: 10px;
+}

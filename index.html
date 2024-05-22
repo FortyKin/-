@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="todo"><a class="diz">ᛝ</a>"TodoList"<a class="diz">ᛝ</a></div>
+    <div id="todo-container">
+        <input type="text" placeholder="Enter task">
+        <input type="date" id="task-date">
+        <input type="time" id="task-time">
+        <button>Add task</button>
+        <ul class="tasks"></ul>
+    </div>
+    <div class="theme-switcher">
+        <input type="checkbox" id="theme-toggle" class="theme-toggle">
+        <label for="theme-toggle" class="toggle-label">
+          <span class="toggle-icon"></span>
+        </label>
+    </div>
+    <script src="js/Task.js"></script>
+    <script src="js/Renderer.js"></script>
+    <script src="js/Component.js"></script>
+    <script src="js/TodoList.js"></script>
+    <script>
+        const themeToggle = document.getElementById('theme-toggle');
+        const todoList = new TodoList(document.querySelector("#todo-container"));
+
+        themeToggle.addEventListener('change', function() {
+            document.body.classList.toggle('dark-theme');
+            todoList.saveToLocalStorage();
+        });
+    </script>
+</body>
+</html>
