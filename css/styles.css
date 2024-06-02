@@ -1,6 +1,9 @@
+/* Устанавливаем фон для всего документа */
 body {
     background-color: #57bef9; 
 }
+
+/* Настройка внешнего вида контейнеров */
 div {
     margin: 15px auto;
     text-align: center;
@@ -8,6 +11,8 @@ div {
     border-radius: 10px;
     background-color: transparent; 
 }
+
+/* Стили для полей ввода */
 input {
     width: 60%;
     background-color: #ffffff;
@@ -16,9 +21,13 @@ input {
     border: none;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* Анимация при наведении на кнопку */
 button:hover {
     animation: pulse 1s infinite;
 }
+
+/* Стили для кнопок */
 button {
     width: auto;
     background-color: #72f68a;
@@ -29,11 +38,15 @@ button {
     margin-left: 10px;
     cursor: pointer;
 }
+
+/* Стили для списка задач */
 .tasks {
     list-style-type: none;
     padding: 0;
     margin-top: 20px;
 }
+
+/* Стили для элементов списка задач */
 .tasks li {
     background-color: #ffffff;
     padding: 10px;
@@ -48,7 +61,8 @@ button {
     margin-right: auto;
     animation: fadeIn 0.5s ease-out;
 }
-/* Определение анимации */
+
+/* Определение анимации для пульсации */
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -61,11 +75,12 @@ button {
     }
 }
 
-/* Применение анимации к кнопке при наведении */
+/* Применение анимации к кнопке внутри элемента списка при наведении */
 .tasks li button:hover {
     animation: pulse 1s infinite;
 }
 
+/* Стили для кнопок внутри списка задач */
 .tasks li button {
     background-color: #ff6b6b;
     padding: 5px 10px;
@@ -85,23 +100,29 @@ button {
         transform: translateY(0);
     }
 }
+
+/* Стили для первого дочернего элемента div (заголовок) */
 div:first-child {
-font-family: 'Pacifico', cursive; /* Рукописный шрифт */
-font-size: 36px; /* Увеличенный размер шрифта */
-color: #333; /* Темный оттенок текста */
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Тень для объема */
-margin-top: 10px;
+    font-family: 'Pacifico', cursive; /* Рукописный шрифт */
+    font-size: 36px; /* Увеличенный размер шрифта */
+    color: #333; /* Темный оттенок текста */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Тень для объема */
+    margin-top: 10px;
 }
+
+/* Стили для переключателя темы */
 .theme-switcher {
     position: absolute;
     top: 20px;
     margin-left: 30px;
 }
 
+/* Скрываем переключатель по умолчанию */
 .theme-toggle {
     display: none;
 }
 
+/* Стили для метки переключателя */
 .toggle-label {
     display: block;
     width: 40px;
@@ -112,6 +133,7 @@ margin-top: 10px;
     position: relative;
 }
 
+/* Стили для иконки переключателя */
 .toggle-icon {
     display: block;
     width: 16px;
@@ -124,10 +146,10 @@ margin-top: 10px;
     transition: transform 0.3s ease;
 }
 
+/* Изменение цвета фона переключателя и положения иконки при активации */
 .theme-toggle:checked + .toggle-label {
     background-color: #333;
 }
-
 .theme-toggle:checked + .toggle-label .toggle-icon {
     transform: translateX(20px);
 }
@@ -137,40 +159,53 @@ body.dark-theme {
     background-color: #333;
     color: #fff;
 }
+
+/* Стили для элементов списка задач в темной теме */
 body.dark-theme .tasks li {
     background-color: #444;
     color: #fff;
 }
 
+/* Изменение цвета иконки переключателя в темной теме */
 body.dark-theme .toggle-icon {
-    background-color: #fff; /* Белый цвет для кружка на темной теме */
-  }
-  
-  body.dark-theme .theme-switcher {
-    background-color: #555; /* Серый цвет для контейнера на темной теме */
-  }
+    background-color: #fff;
+}
+
+/* Стили для переключателя темы в темной теме */
+body.dark-theme .theme-switcher {
+    background-color: #555;
+}
+
+/* Стили для текста с классом .todo */
 .todo {
     color: #333;
-  }
-  
-  body.dark-theme .todo {
+}
+body.dark-theme .todo {
     color: #fff;
-  }
+}
+
+/* Стили для элементов input и button в темной теме */
 body.dark-theme input,
 body.dark-theme button {
     background-color: #555;
     color: #fff;
 }
+
+/* Стили для ссылок с классом .diz */
 a.diz {
-color: #86f4c1;
+    color: #86f4c1;
 }
-body.dark-theme .diz{
+body.dark-theme .diz {
     color: #fe9f06;
 }
+
+/* Стили для завершенных задач */
 .tasks li span.completed {
     text-decoration: line-through;
     color: #999;
 }
+
+/* Обновленные стили для элементов списка задач */
 .tasks li {
     display: flex;
     align-items: left;
@@ -178,10 +213,14 @@ body.dark-theme .diz{
     gap: 10px;
     max-width: 1245px;
 }
+
+/* Стили для текстового содержимого задач */
 .tasks li span {
     flex-grow: 1;
     text-align: left;
 }
+
+/* Стили для полей ввода даты и времени */
 input[type="date"], input[type="time"] {
     width: auto;
     display: inline-block;
